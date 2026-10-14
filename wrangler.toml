@@ -1,0 +1,5 @@
+# Cloudflare Pages (subida directa, sin Git conectado).
+# `npx wrangler@4 pages deploy` usa este archivo: proyecto y carpeta a publicar.
+name = "christian-chongo"
+pages_build_output_dir = "public"
+compatibility_date = "2026-09-01"

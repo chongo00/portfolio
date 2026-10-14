@@ -1,0 +1,5 @@
+/en /  301
+/en/ /  301
+/en/cv /cv/  301
+/en/cv/ /cv/  301
+/en/* /:splat  301

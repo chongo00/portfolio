@@ -1,0 +1,15 @@
+{
+  "name": "christian-chongo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio de Christian G. de la Cruz Chongo. Sitio estático sin dependencias, desplegado en Cloudflare Pages.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node tools/build.mjs && node tools/check.mjs",
+    "capture": "node tools/build.mjs && node tools/capture.mjs && node tools/check.mjs",
+    "dev": "node tools/serve.mjs",
+    "check": "node tools/check.mjs",
+    "deploy": "npm run build && npx wrangler@4 pages deploy --branch main"
+  }
+}
