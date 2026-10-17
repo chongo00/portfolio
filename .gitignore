@@ -2,3 +2,4 @@ node_modules/
 .wrangler/
 # Documentos personales de origen: no se publican ni se suben a ningún repositorio.
 curriculums/
+_site/

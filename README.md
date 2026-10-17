@@ -5,6 +5,7 @@ Static site in English and Spanish, with a printable résumé and downloadable P
 No framework and no dependencies: Node renders the HTML and Cloudflare Pages serves it.
 
 **Live:** https://christian-chongo.pages.dev (English) · https://christian-chongo.pages.dev/es/ (español)
+**Mirror (works from Cuba):** https://chongo00.github.io/portfolio/ · https://chongo00.github.io/portfolio/es/
 
 ---
 
@@ -60,6 +61,17 @@ npm run deploy
 Construye y sube `public/` al proyecto `christian-chongo` de Cloudflare Pages
 (configurado en `wrangler.toml`). La primera vez pide iniciar sesión en
 Cloudflare en el navegador.
+
+### Copia en GitHub Pages (para Cuba)
+
+Desde Cuba (y otros países) `*.pages.dev` no carga sin VPN; `*.github.io` sí.
+Por eso cada push a `main` publica también una copia idéntica en
+https://chongo00.github.io/portfolio/ (`.github/workflows/pages.yml`).
+GitHub sirve el repo bajo `/portfolio/`, así que `tools/mirror.mjs` copia
+`public/` a `_site/` anteponiendo ese prefijo a las rutas absolutas.
+
+La primera vez: en GitHub, **Settings → Pages → Source: GitHub Actions**.
+Para probarla en local: `BASE_PATH=/portfolio node tools/mirror.mjs`.
 
 ## Estructura
 
